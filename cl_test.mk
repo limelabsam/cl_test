@@ -12,7 +12,7 @@ CL_TEST_LICENSE_FILES = COPYING
 #CL_TEST_DEPENDENCIES = ncurses $(if $(BR2_PACKAGE_BUSYBOX),busybox)
 
 define CL_TEST_INSTALL_TARGET_CMDS
-	echo $(INSTALL) -m 0755 $(@D)/helloworld $(TARGET_DIR)/usr/bin/helloworld
+	$(INSTALL) -m 0755 $(@D)/helloworld $(TARGET_DIR)/usr/bin/helloworld
 endef
 
 $(eval $(autotools-package))
