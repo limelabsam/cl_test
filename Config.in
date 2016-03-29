@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CL_TEST
+	bool "cl_test"
+#	select BR2_PACKAGE_NCURSES
+	help
+	  A shitty demo app made by a moron
