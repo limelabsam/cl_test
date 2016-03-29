@@ -15,4 +15,4 @@ define CL_TEST_INSTALL_TARGET_CMDS
 	echo $(INSTALL) -m 0755 $(@D)/helloworld $(TARGET_DIR)/usr/bin/helloworld
 endef
 
-#$(eval $(autotools-package))
+$(eval $(autotools-package))
