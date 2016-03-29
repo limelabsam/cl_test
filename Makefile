@@ -9,7 +9,7 @@ DEL_FILE = rm -rf
 CP_FILE = cp -rf
 TARGET_PATH_LIB = $(ROOTFS_DIR)/usr/lib
 TARGET_PATH_INCLUDE = $(ROOTFS_DIR)/usr/include
-CFLAGS = -DLINUX -DUSE_SOC_MX6 -Wall -O2 -fsigned-char -march=armv7-a -mfpu=neon -mfloat-abi=softfp -DEGL_API_FB -DGPU_TYPE_VIV -DGL_GLEXT_PROTOTYPES -DENABLE_GPU_RENDER_20 I--library-path../include -I$(TARGET_PATH_INCLUDE)
+CFLAGS = -DLINUX -DUSE_SOC_MX6 -Wall -O2 -fsigned-char -march=armv7-a -mfpu=neon -mfloat-abi=softfp -DEGL_API_FB -DGPU_TYPE_VIV -DGL_GLEXT_PROTOTYPES -DENABLE_GPU_RENDER_20 -I../include -I$(TARGET_PATH_INCLUDE)
 LFLAGS = -Wl,--library-path=$(TARGET_PATH_LIB),-rpath-link=$(TARGET_PATH_LIB) -lm -lglib-2.0 -lOpenCL -lCLC -ldl -lpthread
 OBJECTS = $(APPNAME).o
 first: all
